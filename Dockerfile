@@ -7,7 +7,7 @@ RUN apt-get update && \
     chsh -s /usr/bin/tcsh && \
     curl -O https://afni.nimh.nih.gov/pub/dist/bin/linux_fedora_21_64/@update.afni.binaries && \
     tcsh @update.afni.binaries -package linux_openmp_64 -do_extras && \
-    setenv R_LIBS $HOME/R && \
+    export R_LIBS=$HOME/R && \
     mkdir $R_LIBS && \
     echo 'setenv R_LIBS ~/R' >> ~/.cshrc && \
     curl -O https://afni.nimh.nih.gov/pub/dist/src/scripts_src/@add_rcran_ubuntu.tcsh && \
