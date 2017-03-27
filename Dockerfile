@@ -15,5 +15,10 @@ RUN apt-get update && \
     sudo tcsh @add_rcran_ubuntu.tcsh && \
     export PATH=$PATH:/root/abin/ && \
     rPkgsInstall -pkgs ALL && \
-    cp $HOME/abin/AFNI.afnirc $HOME/.afnirc 
+    cp $HOME/abin/AFNI.afnirc $HOME/.afnirc && \
+    suma -update_env &&\
+    echo 'export R_LIBS=$HOME/R' >> ~/.bashrc  
+
+ENV PATH=$PATH:$HOME/abin
+ENV R_LIBS=$HOME/R
 
