@@ -19,6 +19,6 @@ RUN apt-get update && \
     suma -update_env &&\
     echo 'export R_LIBS=$HOME/R' >> ~/.bashrc  
 
-ENV PATH=$PATH:$HOME/abin
+ENV PATH=$HOME/abin:$PATH
 ENV R_LIBS=$HOME/R
 
