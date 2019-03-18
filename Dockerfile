@@ -17,7 +17,7 @@ RUN apt-get update && \
     rPkgsInstall -pkgs ALL && \
     cp $HOME/abin/AFNI.afnirc $HOME/.afnirc && \
     suma -update_env &&\
-    echo 'export R_LIBS=$HOME/R' >> ~/.bashrc  
+    echo 'export R_LIBS=$HOME/R' >> ~/.bashrc && \
     echo 'export PATH=$HOME/abin:$PATH' >> ~/.bashrc
 
 ENV PATH=$HOME/abin:$PATH
