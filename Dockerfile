@@ -18,6 +18,7 @@ RUN apt-get update && \
     cp $HOME/abin/AFNI.afnirc $HOME/.afnirc && \
     suma -update_env &&\
     echo 'export R_LIBS=$HOME/R' >> ~/.bashrc  
+    echo 'export PATH=$HOME/abin:$PATH' >> ~/.bashrc
 
 ENV PATH=$HOME/abin:$PATH
 ENV R_LIBS=$HOME/R
